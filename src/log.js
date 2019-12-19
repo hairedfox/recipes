@@ -1,5 +1,5 @@
 const log = (string) => {
-  console.log(stirng)
+  console.log(string)
 }
 
 export default log

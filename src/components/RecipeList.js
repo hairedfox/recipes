@@ -5,22 +5,12 @@ const RecipeList = (props) => {
     <div style={props.style}>
       <h2>Recipes</h2>
       <ul>
-        <li>
-          <span>Creepy Halloween Skull Cupcakes</span>
-          <span>Desert</span>
-        </li>
-        <li>
-          <span>Creepy Halloween Skull Cupcakes</span>
-          <span>Desert</span>
-        </li>
-        <li>
-          <span>Creepy Halloween Skull Cupcakes</span>
-          <span>Desert</span>
-        </li>
-        <li>
-          <span>Creepy Halloween Skull Cupcakes</span>
-          <span>Desert</span>
-        </li>
+        {props.recipes.map(recipe => (
+          <li key={recipe.id}>
+            <span>{recipe.name}</span>
+            <span>{recipe.category}</span>
+          </li>
+        ))}
       </ul>
     </div>
   )
